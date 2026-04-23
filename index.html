@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Produto Aleatório para prova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="animado">
+    <h1 class="titulo">Relógio Espacial X100</h1>
+    <p class="subtitulo">O presente perfeito para quem quer estilo e tecnologia em um só produto.</p>
+  </header>
+
+  <main>
+    <section class="produto animado" id="etapa-1">
+      <img src="https://via.placeholder.com/360x240?text=Rel%C3%B3gio+X100" alt="Relógio Espacial X100">
+      <div class="descricao">
+        <h2>Sobre o produto</h2>
+        <p>O Relógio Espacial X100 vem com display colorido, conexão bluetooth e bateria de longa duração. Ideal para o dia a dia ou presentear alguém especial.</p>
+        <p class="preco">R$ 199,90</p>
+        <button type="button" class="botao" id="btn-comprar">Comprar agora</button>
+      </div>
+    </section>
+
+    <section class="cadastro animado" id="etapa-1-cadastro">
+      <h2>Cadastro de usuário</h2>
+      <p>Preencha o formulário abaixo para criar sua conta.</p>
+      <form id="registro-form">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Senha segura" required>
+
+        <button type="submit" class="botao cadastrar">Registrar</button>
+      </form>
+      <p id="mensagem" class="mensagem"></p>
+    </section>
+
+    <section class="confirmacao animado" id="etapa-2" hidden>
+      <h2>Continuar compra</h2>
+      <p>Parabéns! Para concluir a compra, confirme seus dados e escolha a forma de pagamento.</p>
+      <div class="resumo-compra">
+        <p><strong>Produto:</strong> Relógio Espacial X100</p>
+        <p><strong>Preço:</strong> R$ 199,90</p>
+      </div>
+      <form id="checkout-form">
+        <label for="endereco">Endereço de entrega</label>
+        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro" required>
+
+        <label for="pagamento">Forma de pagamento</label>
+        <select id="pagamento" name="pagamento" required>
+          <option value="">Selecione</option>
+          <option value="cartao">Cartão de crédito</option>
+          <option value="boleto">Boleto bancário</option>
+          <option value="pix">PIX</option>
+        </select>
+
+        <button type="submit" class="botao">Continuar</button>
+      </form>
+      <p id="mensagem-checkout" class="mensagem"></p>
+
+      <div id="cartao-section" hidden>
+        <h3>Dados do cartão</h3>
+        <form id="cartao-form">
+          <label for="numero-cartao">Número do cartão</label>
+          <input type="text" id="numero-cartao" name="numero-cartao" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+          <label for="nome-cartao">Nome no cartão</label>
+          <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Como aparece no cartão" required>
+
+          <label for="validade">Validade</label>
+          <input type="text" id="validade" name="validade" placeholder="MM/AA" maxlength="5" required>
+
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+
+          <button type="submit" class="botao">Finalizar compra</button>
+        </form>
+        <p id="mensagem-cartao" class="mensagem"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="java.js"></script>
+</body>
+</html>
